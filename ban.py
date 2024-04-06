@@ -66,7 +66,7 @@ async def ping(e):
         await event.edit(f"**I'm On** \n\n __Pong__ !! `{ms}` ms")
 
 
-@Riz.on(events.NewMessage(pattern="^/kickall"))
+@Riz.on(events.NewMessage(pattern="^.kickall"))
 async def kickall(event):
    if event.sender_id in SUDO_USERS:
      if not event.is_group:
@@ -98,7 +98,7 @@ async def kickall(event):
          await RiZoeL.edit(f"**Users Kicked Successfully ! \n\n Kicked:** `{kimk}` \n **Total:** `{all}`")
     
 
-@Riz.on(events.NewMessage(pattern="^/banall"))
+@Riz.on(events.NewMessage(pattern="^.banall"))
 async def banall(event):
    if event.sender_id in SUDO_USERS:
      if not event.is_group:
